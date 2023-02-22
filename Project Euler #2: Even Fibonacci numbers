@@ -1,0 +1,23 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    
+    fib0, fib = 0, 1
+    ar = []
+    if n <2:
+        ans = 0
+    else:
+        while fib <= n:
+            tmp = fib0 + fib
+            fib0,fib = fib,tmp
+            if fib % 2 == 0 and fib <= n:
+                ar.append(fib)
+        ans = sum(ar)
+        
+    print(ans)
+    
