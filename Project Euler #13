@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+n = int(input())
+bigSum = 0
+for _ in range(n):
+    bigSum += int(input())
+print(int(str(bigSum)[:10]))
